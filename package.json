@@ -1,0 +1,17 @@
+{
+  "name": "@company/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run compile",
+    "compile": "truffle compile",
+    "precompile": "rm -rf build/",
+    "flatten-contract": "truffle-flattener contracts/contract.sol > ./flatten/contract.sol"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "truffle": "^5.4.14",
+    "truffle-flattener": "^1.5.0"
+  }
+}
