@@ -1407,8 +1407,6 @@ contract MasterChef is Ownable, ReentrancyGuard {
         emit UpdateEmissionRate(msg.sender, _rewardPerBlock);
     }
 
-
-
     // Only update before start of farm
     function updateStartBlock(uint256 _newStartBlock) external onlyOwner {
         require(block.number < startBlock, "cannot change start block if farm has already started");
